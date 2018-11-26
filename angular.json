@@ -23,9 +23,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/base-theme-colors.scss",
+              "src/assets/css/base-theme-styles.scss",
+              "src/assets/css/typography-default.scss",
+              "src/assets/css/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

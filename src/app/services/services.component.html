@@ -1,0 +1,154 @@
+<div class="banner clearfix">
+  <div id="slider-banner-fullscreen" class="hc-slideshow hc-slideshow--fullscreen carousel slide carousel-fade"
+    data-ride="carousel" data-interval="9000" data-wrap="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="fullscreen-slide">
+          <div class="background-image" style="background-image:url('assets/images/office-1.jpg');"></div>
+          <div class="background-image-overlay"></div>
+          <div class="container">
+            <div class="hc-slideshow-caption p-3 w-100">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1 class="text-animation title large text-white animated fadeInLeft hc-animation-delay-1000">Leistungen:</h1>
+                  <div class="separator-2 animated fadeInUp hc-animation-delay-1250"></div>
+                  <div class="padded-multiline">
+                    <p class="large animated fadeInLeft hc-animation-delay-1250">
+                      Das Leistungsangebot erstreckt sich von der Analyse, Konzeption und Implementierung bis zur
+                      Betreuung und Weiterentwicklung der Produktivsysteme. <span class="d-none d-lg-inline">Projektmanagement
+                        und Koordination externer Services gehören ebenfalls zum Leistungsumfang.</span>
+
+                    </p>
+                  </div>
+                  <a (click)="scrollToElement(target)" class="btn btn-default btn-lg animated fadeInLeft hc-animation-delay-1500">Details</a>
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section #target id="section-2" class="section light-gray-bg scroll-with-offset">
+  <div class="container">
+    <div class="row justify-content-lg-center">
+      <div class="col-lg-8 padding-bottom-clear pv-30">
+        <h2 class="mt-4 text-center">Development</h2>
+        <div class="separator"></div>
+        <div class="hc-item-box-2">
+          <span class="icon without-bg"><i class="text-default fa fa-connectdevelop"></i></span>
+          <div class="body">
+            <h4 class="title">Programmierung <strong>Frontend</strong></h4>
+            <p>Clientseitige Programmierung auf Basis von JavaScript. Vorzugsweise ES6 und höher. Gerne auch mit
+              TypeScript, welches ein Superset von JavaScript darstellt und beim Entwickeln zusätzlichen Komfort und
+              Sicherheit bietet.
+            </p>
+            <p>Neben der Programmierung für UI Komponenten auf Websites kommt JavaScript auch für die Realisierung von
+              webbasierten Apps oder Single Page Applications (SPA) zum Einsatz. Verwendete Frameworks: Angular 2 (und
+              höher) und Ionic.</p>
+          </div>
+        </div>
+
+        <div class="hc-item-box-2">
+          <span class="icon without-bg"><i class="text-default fa fa-connectdevelop"></i></span>
+          <div class="body">
+            <h4 class="title">Programmierung <strong>Backend</strong></h4>
+            <p>
+              Zum Einsatz kommt in der Regel PHP7, welches der serverseitigen Script-Sprache, viele neue Features bei
+              der Entwicklung bereitstellt. Zudem ist mit PHP7 prinzipiell eine bessere Performance erreichbar.
+            </p>
+            <p>
+              Die Applikations-Entwicklung findet mit dem objektorientierten Ansatz statt. Zum Einsatz kommen Best
+              Practices wie die Verwendung von Design Patterns und automatisierten Tests (Unit Tests). Basis für die
+              meisten Anwendungen bildet das Symfony-Framework.
+            </p>
+          </div>
+        </div>
+
+        <div class="hc-item-box-2">
+          <span class="icon without-bg"><i class="text-default fa fa-connectdevelop"></i></span>
+          <div class="body">
+            <h4 class="title">Realisierung <strong>UX/UI</strong></h4>
+            <p>Erstellung von Benutzeroberflächen und -schnittstellen basierend auf aktuellen Webstandards wie HTML5
+              und CSS3.
+              Vorzugsweise Applikationen mit Responsive Design unter Berücksichtigung des Mobile First Ansatzes,
+              welcher neben Design und Performance auch die Informations-Architektur berücksichtigt.
+            </p>
+            <p>
+              Des Weiteren kommen Präprozessoren wie SASS, LESS, Stylus zum Einsatz für die optimale Strukturierung des
+              eingesetzten CSS.
+            </p>
+          </div>
+        </div>
+
+        <div class="hc-item-box-2">
+          <span class="icon without-bg"><i class="text-default fa fa-connectdevelop"></i></span>
+          <div class="body">
+            <h4 class="title">Tool<strong>chain</strong> </h4>
+            <p>
+              Für Frontend- und Backendprojekte werden Build-Tools wie webpack und gulp eingesetzt. Diese basieren auf
+              node.js und werden mit Hilfe von npm installiert. Prinzipiell wird jegliches Dependency-Management mit
+              den dafür vorgesehenen Tools wie npm oder Composer abgebildet.
+            </p>
+          </div>
+        </div>
+
+        <div class="hc-item-box-2">
+          <span class="icon without-bg"><i class="text-default fa fa-connectdevelop"></i></span>
+          <div class="body">
+            <h4 class="title">Git und <strong>git-flow</strong></h4>
+            <p>
+              Alle Projekte werden mit Git verwaltet um jederzeit Zugriff auf die unterschiedlichen Code-Versionen
+              eines Projektes zu haben. Das ermöglicht maximale Transparenz in der Entwicklung für alle Mitglieder des
+              Teams.
+            </p>
+            <p>
+              Zudem bietet es einfache Möglichkeiten verschiedene neue Features oder Patches zur parallel aktuellen
+              Code-Basis
+              zu entwickeln. Als Prozess-Tool wird git-flow verwendet.
+
+            </p>
+          </div>
+        </div>
+        <div class="space-bottom"></div>        
+
+
+        <h2 class="mt-4 text-center">DevOps</h2>
+        <div class="separator"></div>
+        <div class="hc-item-box-2">
+          <span class="icon without-bg"><i class="text-default fa fa-connectdevelop"></i></span>
+          <div class="body">
+            <h4 class="title">VMs und <strong>Continuous Integration</strong></h4>
+            <p>Für die Entwicklung kommen meist virtuelle Maschinen (VM) zum Einsatz welche mit Vagrant oder Docker
+              aufgesetzt werden. Dies bietet der Vorteil, die Systemumgebung des Live-Systems für alle Mitglieder des
+              Teams nahezu identisch bereit stellen zu können.
+            </p>
+            <p>
+              Zudem werden nach Möglichkeit automatisierte Tests des neu erstellten Codes und automatische Deployments
+              auf
+              Testsysteme durchgeführt, um eine möglichst hohe Qualität sicher zustellen (z.B. mit Jenkins).
+            </p>
+          </div>
+        </div>
+        <div class="space-bottom"></div>
+
+        <h2 class="mt-4 text-center">Datenbanken</h2>
+        <div class="separator"></div>
+        <div class="hc-item-box-2">
+          <span class="icon without-bg"><i class="text-default fa fa-connectdevelop"></i></span>
+          <div class="body">
+            <h4 class="title">SQL und <strong>NoSQL</strong></h4>
+            <p>
+              Entwurf und Implementierung von relationalen (z.B. MySQL) und nicht relationalen, sogenannten NoSQL
+              Datenbankanwendungen (z.B. MongoDB).
+            </p>
+          </div>
+        </div>
+        <div class="space-bottom"></div>
+      </div>
+    </div>
+  </div>
+</section>

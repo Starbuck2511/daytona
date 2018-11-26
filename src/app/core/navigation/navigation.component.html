@@ -1,0 +1,35 @@
+<!-- main-navigation start -->
+<!-- classes: -->
+<!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+<!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+<!-- ================ -->
+<div class="main-navigation  animated">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <div class="navbar-brand clearfix hidden-lg-up">
+            <!-- logo -->
+            <div id="logo-mobile" class="logo">
+                <a routerLink="/home"><img id="logo-img-mobile" src="assets/images/logo_light_blue.png" alt="The Project"></a>
+            </div>
+            <!-- name-and-slogan -->
+            <div class="site-slogan">
+                Multipurpose HTML5 Template
+            </div>
+        </div>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
+            aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse scrollspy" id="navbar-collapse-1">
+            <!-- main-menu -->
+            <ul class="navbar-nav ml-lg-auto">
+                <li class="nav-item"><a class="nav-link smooth-scroll active" href="#" routerLink="/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#" routerLink="/technology-stack">Technologien</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#" routerLink="/services">Leistungen</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#section-4">Timeline</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#section-5">Kontakt</a></li>
+            </ul>
+            <!-- main-menu end -->
+        </div>
+    </nav>
+</div>
+<!-- main-navigation end -->

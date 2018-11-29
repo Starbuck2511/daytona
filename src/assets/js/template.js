@@ -1292,17 +1292,21 @@
 				$( ".smooth-scroll a, a.smooth-scroll" ).on( "click", function(e) {
 					var destination = $(this.hash);
 					e.preventDefault();
-					$('html,body').animate({
-						scrollTop: destination.offset().top-66
-					}, 1000);
+					if('undefined' !== typeof destination.offset()) {
+						$('html,body').animate({
+							scrollTop: destination.offset().top-66
+						}, 1000);
+					}					
 				});
 			} else {
 				$( ".smooth-scroll a, a.smooth-scroll" ).on( "click", function(e) {
 					var destination = $(this.hash);
 					e.preventDefault();
+					if('undefined' !== typeof destination.offset()) {
 					$('html,body').animate({
 						scrollTop: destination.offset().top
 					}, 1000);
+				}
 				});
 			}
 		}

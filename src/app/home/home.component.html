@@ -13,7 +13,7 @@
                         <h1 class="title large text-white animated fadeInDown hc-animation-delay-1000">Hallo, mein Name ist <br><span class="text-default">Kai Böker</span></h1>
                         <div class="separator-2 animated fadeInUp hc-animation-delay-1250"></div>
                         <p class="large animated fadeInLeft hc-animation-delay-1500">Ich bin Full Stack Developer. Sie möchten mit mir zusammenarbeiten? Gerne erzähle ich Ihnen mehr über mich.</p>
-                        <a routerLink="/technology-stack" class="btn btn-default btn-lg animated fadeInLeft hc-animation-delay-1750">Mehr erfahren</a>
+                        <a (click)="scrollToElement(target)" class="btn btn-default btn-lg animated fadeInLeft hc-animation-delay-1750">Mehr erfahren</a>
                       </div>
                     </div>
                   </div>
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <section class="main-container">
+      <section #target class="main-container scroll-with-offset">
         <div class="container">
           <div class="row">
 
@@ -47,6 +47,10 @@
                   <div class="separator-2 mb-20"></div>
                   <img src="assets/images/person-2.jpg" alt="" style="max-width: 50%">
                   <div class="separator-2 mb-20"></div>
+                  <p>Gerne erzähle ich Ihnen noch mehr über mich. Zum Beispiel über die Technologien, mit welchen ich bereits gearbeitet habe.</p>
+                  <a href="#" routerLink="/technology-stack" class="btn btn-default-transparent btn-animation btn-animation--slide-to-right">
+                    Technologien                    
+                  </a>
                 </div>
 
                 <!-- sidebar start -->

@@ -4,13 +4,16 @@ import { HomeComponent } from './home/home.component';
 import { TechnologyStackComponent } from './technology-stack/technology-stack.component';
 import { ServicesComponent } from './services/services.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { ContactComponent } from './contact/contact.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'technology-stack', component: TechnologyStackComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'timeline', component: TimelineComponent }
+  { path: 'timeline', component: TimelineComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({

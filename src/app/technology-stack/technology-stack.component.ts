@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { LoaderService } from '../core/loader/loader.service';
 
 @Component({
   selector: 'app-technology-stack',
@@ -35,11 +36,19 @@ export class TechnologyStackComponent implements OnInit, OnDestroy {
     'Webpack.',
   ];
 
-  constructor() { }
+  constructor(private loaderService: LoaderService) { }
 
   ngOnInit() {
+
+    setTimeout(() => {
+      this.loaderService.hide();
+    });
+
     // start the text animation
-    this.timeoutId = setTimeout(() => this.startTextAnimation(0), 3000);
+    this.timeoutId = setTimeout(() => {
+      this.startTextAnimation(0);
+    }, 3000
+    );
   }
 
   // start a typewriter animation for a text in the this.dataText array
@@ -88,6 +97,7 @@ export class TechnologyStackComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.stopTextAnimations();
+    this.loaderService.show();
   }
 
 }

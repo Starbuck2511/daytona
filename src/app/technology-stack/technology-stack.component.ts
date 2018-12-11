@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { LoaderService } from '../core/loader/loader.service';
 
 @Component({
   selector: 'app-technology-stack',
@@ -36,14 +35,10 @@ export class TechnologyStackComponent implements OnInit, OnDestroy {
     'Webpack.',
   ];
 
-  constructor(private loaderService: LoaderService) { }
+  constructor() {
+  }
 
   ngOnInit() {
-
-    setTimeout(() => {
-      this.loaderService.hide();
-    });
-
     // start the text animation
     this.timeoutId = setTimeout(() => {
       this.startTextAnimation(0);
@@ -92,12 +87,11 @@ export class TechnologyStackComponent implements OnInit, OnDestroy {
   }
 
   scrollToElement($element): void {
-    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+    $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
 
   ngOnDestroy() {
     this.stopTextAnimations();
-    this.loaderService.show();
   }
 
 }

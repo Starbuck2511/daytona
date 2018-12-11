@@ -5,6 +5,8 @@ import { TechnologyStackComponent } from './technology-stack/technology-stack.co
 import { ServicesComponent } from './services/services.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: 'technology-stack', component: TechnologyStackComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'timeline', component: TimelineComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'imprint', component: ImprintComponent },
+  { path: 'privacy', component: PrivacyComponent }
 ];
 
 @NgModule({

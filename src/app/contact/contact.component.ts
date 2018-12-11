@@ -1,4 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { LoaderService } from '../core/loader/loader.service';
 
 @Component({
@@ -6,22 +8,50 @@ import { LoaderService } from '../core/loader/loader.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit, OnDestroy {
+export class ContactComponent implements OnInit {
 
-  constructor(private loaderService: LoaderService) { }
+  form: FormGroup;
+  isClassVisible: Boolean = false;
+  isSubmitted: Boolean = false;
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.loaderService.hide();
+  constructor(
+    private fb: FormBuilder,
+    private af: AngularFireDatabase,
+    private loaderService: LoaderService
+  ) {
+    this.createForm();
+  }
+
+  createForm() {
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      subject: ['', Validators.required],
+      message: ['', Validators.required],
+      comment: ['']
     });
   }
 
-  ngOnDestroy() {
-    this.loaderService.show();
+  onSubmit() {
+    this.isClassVisible = true;
+    const { name, email, subject, message, comment } = this.form.value;
+    const date = Date();
+    const formRequest = { name, email, subject, message, date };
+    // honeypot field must be empty
+    if ('' === comment) {
+      this.af.list('/messages').push(formRequest);
+    }
+
+    this.form.reset();
+    this.isSubmitted = true;
   }
 
+  ngOnInit() {
+  }
+
+
   scrollToElement($element): void {
-    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+    $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
 
 }

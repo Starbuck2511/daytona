@@ -36,30 +36,32 @@
         <div class="separator-2"></div>
         <p>Sie möchten mich persönlich kennen lernen? Sie haben eine Frage oder Anregung? Hier sind Sie richtig. Hinterlassen Sie mir einfach eine kurze Nachricht.</p>
         <div class="contact-form">
-          <form class="margin-clear">
+          <form class="margin-clear" [formGroup]="form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
             <div class="form-row">
               <div class="form-group has-feedback col-md-6">
-                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                <input type="text" class="form-control" id="name" placeholder="Name" required formControlName="name">
                 <i class="fa fa-user form-control-feedback"></i>
               </div>
               <div class="form-group has-feedback col-md-6">
-                <input type="email" class="form-control" id="email" placeholder="E-Mail" required>
+                <input type="email" class="form-control" id="email" placeholder="E-Mail" required formControlName="email">
                 <i class="fa fa-envelope form-control-feedback"></i>
               </div>
             </div>
             <div class="form-group has-feedback">
-              <input type="text" class="form-control" id="subject" placeholder="Betreff" required>
+              <input type="text" class="form-control" id="subject" placeholder="Betreff" required formControlName="subject">
               <i class="fa fa-navicon form-control-feedback"></i>
             </div>
             <div class="form-group has-feedback">
-              <textarea class="form-control" rows="6" id="message" placeholder="Nachricht" required></textarea>
+              <textarea class="form-control" rows="6" id="message" placeholder="Nachricht" required formControlName="message"></textarea>
               <i class="fa fa-pencil form-control-feedback"></i>
             </div>
-            <input type="submit" value="Senden" class="submit-button btn btn-lg btn-default">
-          </form>
+            <input type="text" class="form-control" id="comment" placeholder="Kommentar" formControlName="comment">
+            <input [ngClass]="{'animated pulse': isClassVisible }" type="submit" value="Senden" class="submit-button btn btn-lg btn-default" [disabled]="form.invalid || isSubmitted">            
+          </form>          
         </div>
+        <p *ngIf="contactForm.submitted" class="animated bounceInUp hc-animation-delay-1000 pv-20"><i class="fa fa-check"></i> Herzlichen Dank für Ihre Nachricht!</p>
       </div>
-      <aside class="col-lg-4 col-xl-3 ml-xl-auto">
+      <aside class="col-lg-4 col-xl-3 ml-xl-auto">        
       </aside>
     </div>
   </div>

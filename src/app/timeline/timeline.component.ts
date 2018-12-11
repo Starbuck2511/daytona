@@ -1,27 +1,20 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { LoaderService } from '../core/loader/loader.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css']
 })
-export class TimelineComponent implements OnInit, OnDestroy {
+export class TimelineComponent implements OnInit {
 
-  constructor(private loaderService: LoaderService) { }
-
-  ngOnInit() {
-    setTimeout(() => {
-      this.loaderService.hide();
-    });
+  constructor() {
   }
 
-  ngOnDestroy() {
-    this.loaderService.show();
+  ngOnInit() {
   }
 
   scrollToElement($element): void {
-    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+    $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
 
 }

@@ -5,8 +5,8 @@
     <div class="row justify-content-lg-center">
       <div class="col-lg-8 text-center">        
         <ul class="social-links circle animated-effect-1 margin-clear text-center space-bottom">
-          <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li class="xing"><a href="#"><i class="fa fa-xing"></i></a></li>
+          <li class="linkedin"><a href="#" data-toggle="modal" data-target="#linkedin-modal"><i class="fa fa-linkedin"></i></a></li>
+          <li class="xing"><a href="#" data-toggle="modal" data-target="#xing-modal"><i class="fa fa-xing"></i></a></li>
         </ul>
       </div>
     </div>
@@ -26,6 +26,38 @@
                 <a href="#" routerLink="/privacy">Datenschutz</a>
             </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="linkedin-modal" tabindex="-1" role="dialog" aria-labelledby="LinkedIn Modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Hinweis</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span aria-hidden="true">&times;</span><span class="sr-only">Schließen</span></button>
+      </div>
+      <div class="modal-body">
+        <p>Mein LinkedIn-Profil wird in Kürze verfügbar sein. Bitte haben sie noch ein klein wenig Geduld. Vielen Dank.</p>       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="xing-modal" tabindex="-1" role="dialog" aria-labelledby="Xing Modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Hinweis</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span aria-hidden="true">&times;</span><span class="sr-only">Schließen</span></button>
+      </div>
+      <div class="modal-body">
+        <p>Mein Xing-Profil wird in Kürze verfügbar sein. Bitte haben sie noch ein klein wenig Geduld. Vielen Dank.</p>       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Schließen</button>
       </div>
     </div>
   </div>

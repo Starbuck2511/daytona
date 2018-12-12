@@ -1,0 +1,6 @@
+.scroll-with-offset {    
+    padding-top: 75px;
+  }
+  input#comment {
+    display: none;
+  }

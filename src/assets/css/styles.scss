@@ -77,12 +77,15 @@ body {
       background-color: rgba(0, 0, 0, 0.7);
   }
 
-  .transparent-header.gradient-background-header header.header.dark.transparent-header-on {
-    background-color: rgba(0, 0, 0, 0.65);
-  }
+
 
   /* Small devices (tablets, phones less than 767px) */
 @media screen and (max-width: 767px) {
+
+    .transparent-header.gradient-background-header header.header.dark.transparent-header-on {
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
     h1.large {
       font-size: 28px;
     }

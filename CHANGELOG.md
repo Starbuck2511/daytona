@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.0.2] - 2018-12-13
+### Changes
+- Add opacity to desktop header
+
 ## [1.0.1] - 2018-12-13
 ### Changes
 - Add better support for small devices

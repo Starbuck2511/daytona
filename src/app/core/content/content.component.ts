@@ -10,7 +10,7 @@ export class ContentComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // test comment
+    // test comment 3
   }
 
 }
